@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class NewbiePackageTest {
 
-    NewbiePackage<Pen> pack = new NewbiePackage<>();
+    NewbiePackage<Chancery> pack = new NewbiePackage<>();
     Pen p1 = new Pen("YELLOW", "plast", false);
     Pen p2 = new Pen("CYAN", "plast", false);
     Pen p3 = new Pen("WHITE", "plast", false);
@@ -21,6 +21,16 @@ class NewbiePackageTest {
         pack.set(p1, p2);
     }
 
+    @Test
+    void sortByName(){
+        pack.add(p1);
+        pack.add(p2);
+        pack.add(p3);
+        Pencil pncl = new Pencil();
+        pncl.price = 100;
+        pack.add(pncl);
+
+    }
     @Test
     void delete() {
         pack.add(p2);

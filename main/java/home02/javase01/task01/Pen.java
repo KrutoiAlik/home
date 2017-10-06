@@ -16,7 +16,7 @@ public class Pen extends Chancery{
         this.isAutomatic = isAutomatic;
     }
 
-    class Color {
+    static class Color {
         Map<String, String> colors = new HashMap<>() {
             {
                 put("BLACK", "\u001B[30m");
